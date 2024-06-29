@@ -1,0 +1,168 @@
+
+.profile-modal {
+    position: absolute;
+    top: 92px;
+    right: 35px;
+    background-color: #ffff;
+    box-shadow: 4px 4px #C6C6C6;
+    width: 336px;
+    height: auto;
+    max-width: 450px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 25px;
+    border-bottom: 14px solid #22D3EE;
+    display: none;
+    z-index: 1;
+  }
+  
+  .profile-modal .profile-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-bottom: 25px;
+  }
+  
+  .profile-account {
+    margin: 18px;
+    display: flex;
+    margin-left: 0px;
+    align-items: center;
+  }
+  
+  .profile-account h3,
+  span {
+    font-size: 14px;
+    color: black;
+  }
+  
+  hr {
+    margin: 10px 6px;
+  }
+  
+  nav .profile-details {
+    margin-right: 10px;
+  }
+  
+  .profile-account img {
+    height: 68px;
+    width: 69px;
+    border-radius: 6px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #0F4880;
+  
+  }
+  
+  .profile-details img:hover {
+    border: 2px solid #0F4880;
+  }
+  
+  .profile-info {
+    padding: 8px;
+  }
+  
+  .profile-account-info {
+    padding: 6px 13px;
+    flex: 1;
+  }
+  
+  .profile-initial {
+    width: 70px;
+    height: 70px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-initial span {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .profile-info a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+  }
+  
+  .profile-info a:hover {
+    text-decoration: none;
+    color: #0F4880;
+  }
+  
+  .profile-action p {
+    font-size: 21px;
+    font-weight: 500;
+  }
+  
+  .profile-action .close-side-nav,
+  .logo .menu-icon {
+    font-size: 21px;
+    font-weight: 500;
+    background-color: #22D3EE;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .close-side-nav:hover {
+    background-color: #20C8E2;
+  }
+  
+  .logo .menu-icon {
+    background-color: white;
+    color: #0F4880;
+  }
+  
+  .profile-edit:hover {
+    color: #22D3EE;
+  }
+  
+  .edit-profile-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .edit-profile-modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    position: relative;
+  }
+  
+  .close-modal {
+    font-size: 28px;
+    right: 32%; 
+    background-color: #22D3EE;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    position: absolute;;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    background-color: #20C8E2;
+  }
+  
+  .edit-profile-modal-content button{
+    background-color: #22D3EE;
+  }
+ 
+  .edit-profile-modal-content button:hover{
+    background-color: #20C8E2;
+  }
