@@ -6,10 +6,9 @@ include 'db_connection.php';
 $city = $_POST['city'];
 $level = $_POST['level'];
 $gameType = $_POST['gameType'];
-$courtType = $_POST['courtType'];
 
 // Prepare SQL statement to fetch players based on search criteria
-$sql = "SELECT * FROM players WHERE city = ?  AND level_of_play = ? AND game_type = ? AND court_type = ?";
+$sql = "SELECT * FROM players WHERE city = ?  AND level_of_play = ? AND game_type = ?";
 $stmt = $conn->prepare($sql);
 
 // Check if the statement preparation is successful
@@ -18,7 +17,7 @@ if ($stmt === false) {
 }
 
 // Bind parameters
-$stmt->bind_param("ssss", $city,  $level, $gameType, $courtType); 
+$stmt->bind_param("sss", $city,  $level, $gameType); 
 
 $stmt->execute();
 $result = $stmt->get_result();

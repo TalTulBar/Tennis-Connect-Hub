@@ -8,7 +8,8 @@ include 'header.php';
     <h3 class="mt-6">Order History</h3>
     <div class="cart-product grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center		">
         <?php
-        $orderQuery = "SELECT * FROM reservations ORDER BY created_at DESC";
+        $userid = $_SESSION['id_number'];
+        $orderQuery = "SELECT * FROM reservations WHERE user_id = $userid ORDER BY created_at DESC ";
         $orderResult = mysqli_query($conn, $orderQuery);
 
         if ($orderResult) {
@@ -20,7 +21,7 @@ include 'header.php';
                             <div class="order-detail">
                                 <div class="description">
                                     <span class="block font-bold">Order ID: <?php echo $orderRow['order_id']; ?></span>
-                                    <span class="block">Product: <?php echo $orderRow['product_name']; ?></span>
+                                    <span class="block">Product: <?php echo $orderRow['court_name']; ?></span>
                                     <span class="block">Price: $<?php echo $orderRow['price']; ?></span>
                                     <span class="block">Order Date: <?php echo $orderRow['created_at']; ?></span>
                                 </div>

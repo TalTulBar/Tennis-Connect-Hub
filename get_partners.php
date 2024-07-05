@@ -1,7 +1,8 @@
 <?php
+session_start();
 include 'db_connection.php';
-
-$sql = "SELECT full_name, phone_number, email, level_of_play FROM my_partners";
+$userid = $_SESSION['id_number'];
+$sql = "SELECT full_name, phone_number, email, level_of_play FROM my_partners WHERE player_id = $userid";
 $result = $conn->query($sql);
 
 $partners = array();
